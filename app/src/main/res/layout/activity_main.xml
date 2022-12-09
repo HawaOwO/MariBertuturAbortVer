@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="monospace"
-        android:text="Total Questions "
+        android:text="Jumlah Soalan :  "
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -89,15 +89,42 @@
         android:text="Submit" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="326dp"
-        android:layout_height="120dp"
+        android:id="@+id/imageView3"
+        android:layout_width="285dp"
+        android:layout_height="157dp"
+        android:layout_above="@+id/choices_layout"
+        android:layout_below="@+id/total_question"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        app:srcCompat="@drawable/cat" />
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="73dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="326dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        app:srcCompat="@drawable/cat" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="567dp"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:alpha="@integer/material_motion_duration_long_1"-->
+<!--        app:srcCompat="@drawable/backgroundquiz"  />-->
 
 
 </RelativeLayout>
