@@ -1,22 +1,6 @@
 package com.example.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-/*
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
-}
-*/
-
-
-
-
 import android.app.AlertDialog;
 import android.graphics.Color;
 import android.os.Bundle;
