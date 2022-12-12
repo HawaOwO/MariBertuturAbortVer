@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ansD.setOnClickListener(this);
         submitBtn.setOnClickListener(this);
 
-        totalQuestionsTextView.setText("Total questions : "+totalQuestion);
+        totalQuestionsTextView.setText("Jumlah Soalan : "+totalQuestion);
 
         loadNewQuestion();
 
@@ -81,6 +82,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
+        if(currentQuestionIndex==0)
+        {
+            ImageView imgView = (ImageView)findViewById(R.id.imageView3);
+            imgView.setBackgroundResource(R.drawable.cat);
+        }
+
+        else if(currentQuestionIndex==1)
+        {
+            ImageView imgView = (ImageView)findViewById(R.id.imageView3);
+            imgView.setBackgroundResource(R.drawable.house);
+        }
+
+        else if(currentQuestionIndex==2)
+        {
+            ImageView imgView = (ImageView)findViewById(R.id.imageView3);
+            imgView.setBackgroundResource(R.drawable.woman);
+        }
+        else if(currentQuestionIndex==3)
+        {
+            ImageView imgView = (ImageView)findViewById(R.id.imageView3);
+            imgView.setBackgroundResource(R.drawable.three);
+        }
+
         questionTextView.setText(QuestionAnswer.question[currentQuestionIndex]);
         ansA.setText(QuestionAnswer.choices[currentQuestionIndex][0]);
         ansB.setText(QuestionAnswer.choices[currentQuestionIndex][1]);
@@ -92,15 +116,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void finishQuiz(){
         String passStatus = "";
         if(score > totalQuestion*0.60){
-            passStatus = "Passed";
+            passStatus = "Lulus";
         }else{
-            passStatus = "Failed";
+            passStatus = "Gagal";
         }
 
         new AlertDialog.Builder(this)
                 .setTitle(passStatus)
-                .setMessage("Score is "+ score+" out of "+ totalQuestion)
-                .setPositiveButton("Restart",(dialogInterface, i) -> restartQuiz() )
+                .setMessage("Skor anda ialah  "+ score+" daripada "+ totalQuestion)
+                .setPositiveButton("Ulang Semula",(dialogInterface, i) -> restartQuiz() )
                 .setCancelable(false)
                 .show();
 
