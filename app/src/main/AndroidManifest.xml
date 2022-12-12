@@ -13,6 +13,22 @@
         android:theme="@style/Theme.Quiz"
         tools:targetApi="31">
         <activity
+            android:name=".sebutan_huruf1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SebutanHuruf1"
+            android:exported="false"
+            android:label="@string/title_activity_sebutan_huruf1"
+            android:theme="@style/Theme.Quiz.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -25,6 +41,10 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
